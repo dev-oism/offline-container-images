@@ -1,0 +1,5 @@
+{
+    "yaml.schemas": {
+        "https://www.schemastore.org/semantic-release.json": "file:///home/oss-s/projects/offline-container-images/.releaserc"
+    }
+}
