@@ -2,10 +2,10 @@ name: Build and Push Multiple Docker Images
 
 on:
   schedule:
-    - cron: '0 0 * * 0' # Every Sunday at 00:00 UTC
+    - cron: "0 0 * * 0" # Every Sunday at 00:00 UTC
   push:
     tags:
-      - 'v*.*.*'
+      - "v*.*.*"
   workflow_dispatch:
 
 env:
@@ -26,6 +26,10 @@ jobs:
           - name: ansible-release
             dockerfile: ./ansible-release/Dockerfile
             context: ./ansible-release
+
+          - name: ansible-execution
+            dockerfile: ./ansible-execution/context/Dockerfile
+            context: ./ansible-execution/context
 
     steps:
       - name: Checkout repository
